@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int lemons;
+    int required_lemons = 21;
+    
+    printf("Enter the number of lemons you have: ");
+    scanf("%d", &lemons);
+    
+    lemons == required_lemons
+        ? printf("You can proceed.\n")
+        : (lemons < required_lemons
+            ? printf("You are missing %d lemons.\n", required_lemons - lemons)
+            : printf("You have %d extra lemons.\n", lemons - required_lemons)
+          );
+    
+    return 0;
+}
