@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    long long int phoneNumber;
+    
+    printf("Enter a 10-digit mobile number: ");
+    scanf("%lld", &phoneNumber);
+    
+    if (phoneNumber >= 1000000000LL && phoneNumber <= 9999999999LL) {
+        printf("You entered a valid mobile number: %lld\n", phoneNumber);
+    } else {
+        printf("Invalid mobile number. Please enter exactly 10 digits.\n");
+    }
+    
+    return 0;
+}
