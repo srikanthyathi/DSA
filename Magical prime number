@@ -1,0 +1,17 @@
+#include <stdio.h>  
+#include <conio.h>  
+int main ()  
+{  
+    int num;  
+    printf ( " Enter the number: ");  
+    scanf (" %d", &num);   
+    if ( num % 9 == 1)  
+    {  
+        printf ( " It is a Magic Number. ");  
+    }  
+    else  
+    {  
+        printf ( " it is not a Magic Number. ");  
+    }  
+    return 0;  
+}  
