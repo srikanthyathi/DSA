@@ -1,0 +1,23 @@
+a*b+(c+d)-e/f+g*h
+Data         Stack                Output
+a             *                     a
+*             *                     a
+b             +                     ab
++             +C                    ab*
+(             +C                    ab*
+c             +(+                   ab*c
++             +(+                   ab*c
+d             +(+                   ab*cd
+)             +                     ab*cd+
+-             -                     ab*cd++
+e             -                     ab*cd++e
+/             -/                    ab*cd++e
+f             -/                    ab*cd++ef
++             +                     ab*cd++ef/-
+g             +                     ab*cd++ef/-g
+*             +*                    ab*cd++ef/-g
+h             +*                    ab*cd++ef/-gh
+
+Ans:ac*cd++ef/-gh*+
+
+
