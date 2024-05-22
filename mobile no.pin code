@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int age = 30;
+    long long int pincode = 560001;
+    char mobileNumber[] = "9876543210";
+    char aadharNumber[] = "123456789012";
+    char debitCard[] = "ABCD1234EFG56789";
+
+    printf("Age: %d\n", age);
+    printf("Pincode: %lld\n", pincode);
+    printf("Mobile Number: %s\n", mobileNumber);
+    printf("Aadhar Number: %s\n", aadharNumber);
+    printf("Debit Card Serial Number: %s\n", debitCard);
+
+    return 0;
+}
