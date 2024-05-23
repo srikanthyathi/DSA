@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+// Function to check if a number is a neon number
+int isNeon(int num) {
+    int square = num * num;
+    int sum = 0;
+    
+    // Calculate the sum of digits of the square
+    while (square > 0) {
+        sum += square % 10;
+        square /= 10;
+    }
+    
+    // Check if the sum equals the original number
+    if (sum == num) {
+        return 1; // Neon number
+    } else {
+        return 0; // Not a neon number
+    }
+}
+
+int main() {
+    printf("Neon numbers from 1 to 1000:\n");
+    
+    // Check and print neon numbers from 1 to 1000
+    for (int i = 1; i <= 1000; i++) {
+        if (isNeon(i)) {
+            printf("%d\n", i);
+        }
+    }
+    
+    return 0;
+}
