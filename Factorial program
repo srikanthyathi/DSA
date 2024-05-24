@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(){
+    int num;
+    int fact = 1;
+    
+    printf("Enter the non- negative integer: ");
+    scanf("%d", &num);
+    
+    for (int i = 2; i <= num; ++i) {
+        fact *=i;
+    }
+    
+    printf("Factorial of %d is: %u\n", num, fact);
+
+    return 0;
+}
