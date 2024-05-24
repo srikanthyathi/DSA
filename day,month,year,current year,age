@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <time.h>
+
+int calculateAge(int birth_day, int birth_month, int birth_year, int current_day, int current_month, int current_year) {
+    int age = current_year - birth_year;
+
+    if (current_month < birth_month || (current_month == birth_month && current_day < birth_day)) {
+        age--;
+    }
+
+    return age;
+}
+
+int main() {
+    int birth_day, birth_month, birth_year;
+
+    printf("Enter birth day: ");
+    scanf("%d", &birth_day);
+    printf("Enter birth month: ");
+    scanf("%d", &birth_month);
+    printf("Enter birth year: ");
+    scanf("%d", &birth_year);
+
+    time_t t = time(NULL);
+    struct tm *tm_info = localtime(&t);
+
+    int current_day = tm_info->tm_mday;
+    int current_month = tm_info->tm_mon + 1; 
+    int current_year = tm_info->tm_year + 1900; 
+
+    int age = calculateAge(birth_day, birth_month, birth_year, current_day, current_month, current_year);
+
+    printf("Current Date: %02d-%02d-%04d\n", current_day, current_month, current_year);
+    printf("Age: %d years\n", age);
+
+    return 0;
+}
