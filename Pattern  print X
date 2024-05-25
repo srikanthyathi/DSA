@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void print_x(int size) {
+    int i, j;
+    for (i = 0; i < size; i++) {
+        for (j = 0; j < size; j++) {
+            if (i == j || i + j == size - 1) {
+                printf("*");
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int size = 10;
+    print_x(size);
+    return 0;
+}
