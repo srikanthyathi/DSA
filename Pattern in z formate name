@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    
+    int i, j, rows;
+    char text[] = "SRIKANTH";
+    int text_length = strlen(text);
+
+    printf("Please enter number of rows = ");
+    scanf("%d", &rows);
+
+    for (i = 0; i < text_length; i++) {
+        for (j = 0; j < text_length; j++) {
+            if (i == 0 || i == text_length - 1) {
+                printf("%c", text[j]);  
+            } else if (j == text_length - i - 1) {
+                printf("%c", text[j]); 
+            } else {
+                printf(" ");
+            }
+            printf(" ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
