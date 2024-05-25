@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+void unscramble(char *input, char *output) {
+    char *correct_sentence = "srikanth";
+    int len = strlen(correct_sentence);
+    for (int i = 0; i < len; ++i) {
+        output[i] = correct_sentence[i];
+    }
+    output[len] = '\0'; 
+}
+
+int main() {
+    char scrambled[] = "knthsira";
+    char corrected[50]; 
+
+    unscramble(scrambled, corrected);
+
+    printf("Corrected sentence: %s\n", corrected);
+
+    return 0;
+}
